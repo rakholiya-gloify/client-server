@@ -11,7 +11,7 @@ section 2
 must communicate using sockets only.
 
 
-Section 1 (Server)
+# Section 1 (Server)
 - The server and an identical copy of the server called the mirror [see section 3] must
 both run before any of the client (s) run and both of them must wait for request/s
 from client/s
@@ -29,7 +29,7 @@ pclientrequest() function to service the request and then go back to listening t
 requests from other clients
 
 
-Section 2 (Client)
+# Section 2 (Client)
 The client process runs an infinite loop waiting for the user to enter one of the commands.
 Note: The commands are not Linux commands and are defined(in this project) to denote the
 action to be performed by the server.
@@ -83,7 +83,7 @@ entered by the user (as per the rules in Section 3) before processing it.
 incorrect.
 
 
-Section 3 
+# Section 3(Mirror)
 Alternating Between the Server and the Mirror
 - The server and the mirror (the server’s copy possibly with a few
 additions/changes) are to run on two different machines/terminals.
