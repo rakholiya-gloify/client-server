@@ -36,7 +36,7 @@ action to be performed by the server.
 Once the command is entered, the client verifies the syntax of the command and if it is okay,
 sends the command to the server, else it prints an appropriate error message.
 List of Client Commands:
-- getfn filename
+### 1. getfn filename
 o If the file filename is found in its file directory tree rooted at ~, the server must
 return the filename, size(in bytes), date created and file permissions to the
 client and the client prints the received information on its terminal.
@@ -46,7 +46,7 @@ the first successful search/match of filename
 - Else the client prints “File not found”
 - Ex: Client$ getfs sample.txt
 
-- getfz size1 size2
+### 2. getfz size1 size2
 - The server must return to the client temp.tar.gz that contains all the files in
 the directory tree rooted at its ~ whose file-size in bytes is >=size1 and <=size2
 - size1 < = size2 (size1>= 0 and size2>=0)
@@ -54,7 +54,7 @@ the directory tree rooted at its ~ whose file-size in bytes is >=size1 and <=siz
 found” to the client (which is then printed on the client terminal by the client)
 - Ex: Client$ getfz 1240 12450
 
-- getft <extension list> //up to 3 different file types
+### 3. getft <extension list> //up to 3 different file types
 - the server must return temp.tar.gz that contains all the files in its directory tree
 rooted at ~ belonging to the file type/s listed in the extension list, else the
 server sends the message “No file found” to the client (which is printed on the
@@ -64,16 +64,17 @@ different file types
 - Ex: Client$ getft c txt
 - Client$ getft jpg bmp pdf
 
-- getfdb date
+### 4. getfdb date
 - The server must return to the client temp.tar.gz that contains all the files in the
 directory tree rooted at ~ whose date of creation is <=date
 - Ex: Client$ getfdb 2023-01-01
 
-- getfda date
+### 5. getfda date
 - The server must return to the client temp.tar.gz that contains all the files in the
 directory tree rooted at ~ whose date of creation is >=date
 - Ex: Client$ getfda 2023-03-31
-- quitc The command is transferred to the server and the client process is terminated
+
+### 6. quitc The command is transferred to the server and the client process is terminated
 Note: All files returned from the server must be stored in a folder named f23project in the
 home directory of the client.
 Note:
